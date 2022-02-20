@@ -25,7 +25,7 @@
                 <input type="text" name="name" id="name" class="form-control">
                  
                 <label for="email"> email </label>
-                <input type="email" name="email" id="email" class="form-control">
+                <input type="email" name="email" id="email" class="form-control" value="{{ old('email') }}">
 
                 <label for="password"> Mot de Passe</label>
                 <input type="password" name="password" id="password" class="form-control">
@@ -41,7 +41,7 @@
                
                 <br>
                   
-                <input type="submit" value="Envoyer"   class="btn btn-primary">
+                <input type="submit" value="Envoyer"   class="btn btn-success">
             </form>
            
     

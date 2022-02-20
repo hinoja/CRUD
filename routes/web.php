@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActorController;
+use App\Http\Controllers\testController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,7 @@ Route::get('/create',[ActorController::class,'index'])->name('page.create');
 Route::get('/liste des admins',[ActorController::class,'display'])->name('page.list');
 Route::post('/store',[ActorController::class,'store'])->name('page.store');
  Route::post('/update/{id}',[ActorController::class,'update'])->name('page.update');
-Route::get('/delete/{id}',[ActorController::class,'delete'])->name('page.delete');
+Route::delete('/delete/{id}',[ActorController::class,'delete'])->name('page.delete');
 Route::get('/editer/{id}',[ActorController::class,'edit'])->name('page.edit');
 
+ 

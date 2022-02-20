@@ -33,7 +33,7 @@
                                                 <td> {{ $actor->pays }}</td>
                                                 <td>
                                                     {{   
-                                                       $actor->birthDay
+                                                       now()->diffInYears(Carbon::parse(->birthDay))
                                                     }}
                                                  </td>
                                                 <td> 
@@ -48,6 +48,8 @@
                            
                       </tbody>
                   </table>
+                  
+                  {{ $actors->links() }}
              
 
         </div>

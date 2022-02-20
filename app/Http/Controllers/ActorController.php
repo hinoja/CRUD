@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Acteur;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ActorController extends Controller
@@ -24,7 +25,8 @@ class ActorController extends Controller
      */
     public function  display()
     {
-        return view('List',['actors'=>Acteur::orderBy('id','desc')->get()]);
+        // dd(Acteur::orderBy('id','desc')->paginate(5));
+        return view('List',['actors'=>Acteur::orderBy('id','desc')->paginate(5)]);
          
     }
 

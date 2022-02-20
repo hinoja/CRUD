@@ -19,10 +19,10 @@ class CreateActeursTable extends Migration
         
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('adresse');
+            $table->string('adresse')->nullable();
              
-            $table->string('pays');
-            $table->date('birthDay');
+            $table->string('pays')->nullable();
+            $table->date('birthDay')->nullable();
             $table->timestamps();
         });
     }

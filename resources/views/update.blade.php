@@ -29,7 +29,7 @@
             
                     <br>
                     <label for="name"> NOM </label>
-                <input type="text" name="name"  value="{{ $item->name }}" id="name" class="form-control">
+                <input type="text" name="name"  value="{{ old('name') ?? $item->name }}" id="name" class="form-control">
                  
                 <label for="email"> email </label>
                 <input type="email" name="email" id="email" value="{{ $item->email }}" class="form-control">

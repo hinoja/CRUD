@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-       Acteur::factory()->count(20)->create();
+       Acteur::factory()->count(30)->create();
        $this->call([
            ActorSeeder::class
        ]);

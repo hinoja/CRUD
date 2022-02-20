@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Acteur;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Facades\Hash;
 
 class ActorFactory extends Factory
 {
@@ -20,9 +21,10 @@ class ActorFactory extends Factory
             'adresse' => $this->faker->address(),
             'pays' => $this->faker->country(),
             'birthDay' => $this->faker->date(),
-            'password' => $this->faker->password(),
+            'password' => $this->faker->password(), 
             'email' => $this->faker->unique()->safeEmail(),
             'created_at' => now(),
+            // Hash::make('password');
         ];
     }
 }
